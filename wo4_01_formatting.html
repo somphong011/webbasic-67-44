@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: o;
+            padding: 0;
+            line-height: 1.5;
+            background-color: rgb(0, 225, 225);
+        }
+        .container {
+            background-color: rgb(0, 225, 225);
+            width: 60%;
+            margin: 20px auto;
+
+        }
+
+        .card{
+             background-color: antiquewhite;
+             padding: 20px 40px;
+             margin: 20px 0;
+             border-radius: 20px;
+
+             border-top: 4px solid red;
+        }
+           .card.module-1{
+             border-top: 4px solid rgb(26, 2, 210);
+        }
+                   .card.module-2{
+             border-top: 4px solid rgb(146, 0, 139);
+        }
+        h1 {
+            color: blue;
+            text-align: center;
+        }
+
+        header {
+            text-align: center;
+        }
+        .text-color {
+            color: rgb(201, 0, 0);
+        }
+
+        .back-link {
+            color: rgb(129, 129, 255);
+            text-decoration-line: none;
+            border-radius: 50px;
+            background-color: blanchedalmond;
+            display: inline-block;
+            padding:  4px 20px;
+            text-align: center;
+        }
+         .back-link:hover {
+                color: rgb(149, 35, 0);
+                background-color: blue;
+                text-decoration-line: underline;
+            }
+        .AI {
+            margin: 1.5;
+        }
+        .card-x{
+            border: 2px solid #000;
+            padding: 12px 20px;
+            width: 20;
+        }
+
+        .note {
+            border-left: 5px solid rgb(221, 184, 184);
+            padding: 5px;
+        }
+
+        main{
+        }
+
+        footer{
+            padding: 5;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Workshop: HTML Text Formatting</h1>
+            <p>ฝึกใชแ้ท็กรูปแบบขอ้ความ (Formatting Tags) เพื่อสร้างเนื้อหาที่อ่านง่ายและเป็นระเบียบ</p>
+        </header>
+        <main>
+            <!---------------- card1--------- -->
+            <div class="card">
+            <h2>1.สิ่งที่ต้องรู้ก่อนเริ่มทำ Workshop</h2>
+            <p>HTML มีแท็กสำหรับจัดรูปแบบข้อความทำให้เนื้อหูเูด่นอ่านงา่ยและสื่อความหมายได้ดีขึ้น</p>
+            <ul>
+                <li>&lt;b&gt; - <b class="text-color">ตัวหนา (เน้นเฉย ๆ)</b> </li>
+                <li>&lt;strong&gt; - <strong class="text-color">ตัวหนาแบบ “สำคัญ” เชิงความหมาย (semantic importance)</strong> </li>
+                <li>&lt;i&gt; - <i class="text-color">ตัวเอียง (ใช้กับศัพท์เ์ฉพาะหรือตัวเน้น )</i> </li>
+                <li>&lt;em&gt; - <em class="text-color">ตัวเอียงแบบเน้นน้ำเสียง</em></li>
+                <li>&lt;u&gt; - <u class="text-color">ขีดเส้นใต้</u> </li>
+                <li>&lt;ins&gt; - <ins class="text-color">ไฮไลต์ข้อความ</ins> </li>
+                <li>&lt;mark&gt; - <mark class="text-color"> แสดงข้อความเป็นรูปแบบโค้ด</mark> </li>
+                <li>&lt;code&gt; - <code class="text-color">ข้อความขนาดเล็ก</code> </li>
+                <li>&lt;small&gt; - <small class="text-color">ข้อความขีดฆ่า</small> </li>
+                <li>&lt;del&gt; - <del class="text-color">ตัวห้อย </del> </li>
+                <li>&lt;sub&gt; - <sub class="text-color">ตัวยก</sub> </li>
+                <li>&lt;sup&gt; - <sup class="text-color">แท็กที่ไม่รองรับใน</sup>  </li>
+
+
+            </ul>
+            <div class="card-x"> แท็กที่ไม่รองรับใน HTML5
+                <ul>
+                <li>&gt;strike&gt; - <strike class="text-color">not support in HTML5 </strike></li>
+                <li>&gt;big&gt; - <big class="text-color"> support in HTML5</big></li>
+                <li>&gt;tt&gt; - <tt class="text-color"> not support in HTML5</tt></li>
+                 </ul>
+            </div>
+                
+             <p class="note">💡นักศึกษาต้องใช้แท็ก formatting อย่างน้อย 5 ชนิด ในงานนนี้ </p>
+            </div>
+
+
+            <!------------------- card2 ------------------->
+            <div class="card module-1">
+            <h2>2.ภารกิจของสำหรับนักศึกษาต้องทำ</h2>
+            <p>ให้ค้นหาเนื้อหาเกี่ยวกับ “เทคโนโลยีคอมพิวเตอร์สมัยใหม่” โดยต้องมี:</p>
+            <ul>
+                <li>หัวข้อ &lt;h1&gt; 1 อัน</li>
+                <li>หัวข้อ &lt;h1&gt; 1 อัน</li>
+                <li>ใชแ้ท็ก formatting อย่างน้อย 5 ประเภท</li>
+                <li>ข้อความไหนมีการจัด formatting ใ้ห้ใส่สีข้อความเป็นสีแดงชมพู</li>
+            </ul>
+
+            </div>
+            <!------------- card3---------- -->
+            <div class="card module-2">
+            <h2> <u><strong>3.Generative AI </strong></u></h2>
+            <p class="AI"> <b><mark><ins>1.ยุคสมัยของ Generative AI </ins></mark></b> และโมเดลภาษาขนาดใหญ่
+ในปัจจุบันเราได้ก้าวเข้าสู่ยุคของ Generative AI อย่างเต็มตัว ซึ่งเป็นเทคโนโลยีที่สามารถสร้างสรรค์เนื้อหาใหม่ๆ 
+ได้ด้วยตนเอง ไม่ว่าจะเป็นข้อความ รูปภาพ โค้ดคอมพิวเตอร์ หรือแม้แต่วิดีโอ โดยมีรากฐานมาจากโมเดลภาษาขนาดใหญ่ 
+ <code> (Large Language Models หรือ LLMs)</code> เช่น GPT หรือ Gemini โมเดลเหล่านี้ถูกฝึกฝนด้วยข้อมูลมหาศาลจนสามารถเข้าใจบริบทของภาษา 
+มีความสามารถในการสรุปความ ตอบคำถามที่ซับซ้อน และกลายเป็นผู้ช่วยอัจฉริยะที่มนุษย์สามารถพูดคุยโต้ตอบได้เหมือนการคุยกับผู้เชี่ยวชาญ</p>
+<p> <b> <mark><ins>2. การบูรณาการ AI เข้ากับทุกอุตสาหกรรม</ins></mark></b>
+AI สมัยใหม่ไม่ได้จำกัดอยู่แค่ในแชทบอทเท่านั้น แต่ได้กลายเป็นโครงสร้างพื้นฐานในเกือบทุกภาคส่วน 
+ในวงการ การแพทย์ AI ถูกใช้เพื่อวิเคราะห์ภาพถ่ายทางรังสีเพื่อตรวจหามะเร็งได้อย่างแม่นยำกว่ามนุษย์ 
+ในด้าน การเงิน ใช้ในการตรวจจับการทุจริตและการวิเคราะห์ความเสี่ยงแบบเรียลไทม์ ส่วนในภาค อุตสาหกรรมการผลิต 
+ระบบอัตโนมัติที่ขับเคลื่อนด้วย AI ช่วยเพิ่มประสิทธิภาพในการทำงานและลดความผิดพลาด 
+ทำให้ AI กลายเป็นเครื่องมือสำคัญในการขับเคลื่อนเศรษฐกิจดิจิทัลระดับโลก</p>
+<p> <b><mark><ins>3.จริยธรรมและความปลอดภัยของปัญญาประดิษฐ์</ins></mark></b>
+เมื่อ AI มีบทบาทมากขึ้น ประเด็นเรื่อง AI Ethics หรือจริยธรรมของปัญญาประดิษฐ์จึงกลายเป็นเรื่องที่ทั่วโลกให้ความสำคัญอย่างยิ่ง 
+นักพัฒนาต้องเผชิญกับความท้าทายในการแก้ไขปัญหาความลำเอียงของข้อมูล (Bias) ความเป็นส่วนตัวของข้อมูล 
+และความโปร่งใสของกระบวนการตัดสินใจ (Explainable AI) รวมถึงการกำหนดมาตรการป้องกันไม่ให้ AI ถูกนำไปใช้ในทางที่ผิด เช่น การสร้างข่าวปลอม (Deepfake) ทำให้เป้าหมายของ AI สมัยใหม่ไม่ใช่แค่ความเก่งกาจ 
+แต่คือความปลอดภัยและต้องสร้างประโยชน์ให้แก่มนุษยชาติอย่างแท้จริง</p>
+            </div>
+      </main>
+      <footer>
+        <a href="index.html" class="back-link " > &larr; Back to HTML Tutorial </a>
+      </footer>
+      </div>
+
+</body>
+</html>
