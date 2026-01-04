@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         body {
+         font-family: Arial, Helvetica, sans-serif;
+          padding: 0;
+          margin: 0;
+          line-height: 1;
+          background-color: aqua;
+        }
+        .container {
+            background-color: rgb(214, 238, 159);
+            width: 60%;
+            margin: 20px auto;
+        }
+          h1 {
+            color: blue;
+            text-align: center;
+        }
+        .header{
+            text-align: center;
+        }
+         .card{
+             background-color: antiquewhite;
+             padding: 20px 40px;
+             margin: 20px 0;
+             border-radius: 20px;
+
+             border-top: 4px solid red;
+        }
+         .link-box {
+            border: 1px solid #ff9f9f;
+            padding: 12px 16px;
+            margin: 8px 0 10px;
+            border-radius: 12px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.10);
+            border: 1px solid #e0e0e0;
+        }
+        .link-boxa {
+            font-weight: bold;
+             text-decoration: none;
+        }
+         .link-box a:hover {
+            text-decoration: underline;
+        }
+        .btn-web {
+            display: inline-block;
+            padding: 8px 15px;
+            background-color: #6200ee;
+            color: white;
+            border-radius: 4px;
+        }
+        code{
+           background: #ececec;
+            padding: 2px 4px;
+            border-radius: 2px;
+        }
+        p{
+            font-size: 10px;
+        }
+        .note {
+            border-left: 4px solid red;
+            padding-left: 12px;
+            color: #666;
+            margin-top: 12px;
+            font-size: 14px;
+        }
+        pre {
+            background: #f0f0f0;
+            border-left: 4px solid #c4005a ;
+            padding: 12px;
+            font-size: 14px;
+            overflow-x: auto;
+        }
+        ul {
+            margin-top: 6px;
+        }
+        h2 {
+            margin-top: 0;
+            color: #333;
+        }
+        .download-box {
+            display: inline-block;
+            background-color: #f7e36b;
+            padding: 8px 14px;
+            text-decoration: none;
+            color: #333;
+            margin: auto;
+        }
+        .website-box{
+            display: inline-block;
+            background-color: red;
+            padding: 8px 14px;
+            color: #f0f0f0;
+            margin: auto;
+        }
+        .back-link {
+            color: rgb(129, 129, 255);
+            text-decoration-line: none;
+            border-radius: 50px;
+            background-color: blanchedalmond;
+            display: inline-block;
+            padding:  4px 20px;
+            text-align: center;
+        }
+         .back-link:hover {
+                color: rgb(149, 35, 0);
+                background-color: blue;
+                text-decoration-line: underline;
+            }
+        
+    
+    </style>
+</head>
+<body>
+    <div class="container"></div>
+    <head>
+         <h1>Workshop: Various Links</h1>
+    <p class="header">เรียนรู้ลิ้งก์หลายรูปแบบ พร้อมตัวอย่างและแบบฝึกหัด</p>
+    </head>
+    <main>
+        <ul>
+             <!---------------- card1-------------------->
+            <div class="card">
+                <h2>1.External Links</h2>
+                  <div class="link-box">
+                    
+                <a href="https://www.wikipedia.org" target="_blank">Visit Wikipedia</a>
+                <p><span><code>target="_blank" </span> เปิดลิงก์ในแท็บใหม่</code></p></div>
+                
+                  <div class="link-box">
+                  <a href="https://www.google.com" target="_self">Visit Google</a>
+            <p><code><span>target="_self"</span>เปิดลิงก์ในหน้าเดิม</code></p></div>
+            </div></ul>
+
+
+        <!------------------------------- card2 ------------------------------------------------>
+        <ul>
+                <div class="card">
+                <h2>2. Internal Links & Anchor Links</h2>
+                <div>
+                    <pre class="note">&lt;a href="about.html"&gt;About Us&lt;/a&gt;
+
+
+&lt;a href="#jump"&gt;Jump to Section&lt;/a&gt;
+
+
+&lt;h3 id="jump"&gt;This is the jump target&lt;/h3&gt;</pre>
+                </div>
+                <a href="about.html">click to jump</a>
+
+                <h3>This is the jump target.</h3>
+            </div></ul>
+
+            <!--------------------- card3 ----------------------->
+            <ul>
+                <div class="card">
+                    <h2>3.Email Links</h2>
+                    <div>
+                        <pre>&lt;a href="mailto:student@example.com?subject=Hello"&gt;
+    Send an Email
+&lt;/a&gt; 
+
+</pre>
+                    </div>
+                    <a href="674230011@webmail.npru.ac.th">Send an Email</a>
+                </div>
+            </ul>
+            <!------------card4----------->
+            <ul>
+                 <div class="card">
+                <h2>4.Download Links</h2>
+                <div>
+                    <pre> &lt;a href="files/sample.txt" download&gt;Download File&lt;/a&gt;</pre>
+                </div>
+                <a href="files/sample.txt" class="download-box">Download Text File</a>
+                <p>ต้องมีไฟล์ในโฟเดอร์ถึงจะดาวโหลดได้จริง</p>
+            </div>
+               </ul>
+               <!--------------------card5 ------------------>
+               <ul>
+                <div class="card">
+                <h2>5.Button Links</h2>
+                <p>ลิ้งก์ที่ออกแบบให้คล้ายปุ่ม เหมาะกับปุ่มสมัคร ปุ่มอ่านเพิ่มเติม หรือปุ่มนำทาง</p>
+                <pre>       &lt;a href="https://www.example.com" class="btn-link"&gt;
+       Visit Website
+       &lt;/a&gt;</pre>
+      <a href="https://www.npru.ac.th" class="btn-web">Visit Website</a>
+       <p>สร้างปุ่มด้วยแท็ก button</p>
+       <pre>
+ &lt;button onclick="document.location='index.html'"&gt;HTML Tutorial&lt;/button&gt;
+- มักใช้เมื่อลิงก์ไป หน้าในเว็บเดียวกัน
+- ผูกกับ DOM (document) โดยตรง
+&lt;button onclick="location.href='https://www.example.com'"&gt;Visit Website&lt;/button&gt;
+- นิยมใช้มากกว่า
+- เหมาะทั้งลิงก์ ภายในและภายนอกเว็บ
+- ผูกกับ window โดยตรง
+       </pre>
+
+               </div>
+               </ul>
+
+               <!-------------card6----------->
+               <ul>
+               <div class="card">
+                <h2>6.Image Links</h2>
+                <p>คลิกที่รูปภาพเพื่อเปิดลิ้งก์</p>
+                <pre>
+&lt;a href="https://youtube.com"&gt;
+&lt;img src="images/sample.jpg" width="250"&gt;
+&lt;/a&gt;</pre>
+<a href="https://youtube.com"><img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png" width="250"></a>
+<p>💡หากต้องการใช้รูปของตนเอง ต้องเก็บรูปไว้ในโฟลเดอร์ เช่น images/photo.jpg</p>
+                
+               </div>
+               </ul>
+            <a href="index.html" class="back-link " > &larr; Back to HTML Tutorial </a>
+      </footer>
+    </main>
+</body>
+</html>
