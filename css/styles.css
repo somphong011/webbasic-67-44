@@ -1,0 +1,284 @@
+/* Global CSS styles */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-image: url(https://images.pexels.com/photos/10613737/pexels-photo-10613737.jpeg);
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 200px;
+}
+
+/* container Styles */
+.container {
+    max-width: 1200px;
+    margin: 200px auto 30px;
+}
+
+/* Share CSS */
+code {
+    background-color: rgb(183, 182, 182);
+    border-radius: 4px;
+    padding: 3px 5px;
+}
+
+pre {
+    background: #f0f0f0;
+    border-left: 4px solid #43199f;
+    padding: 12px;
+    font-size: 14px;
+    white-space: pre-wrap;
+}
+
+.card {
+    background-color: rgb(255, 255, 255);
+    padding: 25px 30px;
+    border-top: 5px solid rgb(195, 239, 255);
+    border-radius: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 15px rgb(239, 237, 253);
+}
+
+/* สีหัวข้อ card */
+.card-module-1 {
+    border-top-color: red
+}
+
+.card-module-2 {
+    border-top-color: rgb(103, 63, 183)
+}
+
+.card-module-3 {
+    border-top-color: rgb(117, 230, 57)
+}
+
+.card-module-4 {
+    border-top-color: rgb(185, 34, 177)
+}
+
+.card-module-5 {
+    border-top-color: rgb(116, 73, 21)
+}
+
+.card-module-6 {
+    border-top-color: rgb(97, 226, 255)
+}
+
+.card-module-7 {
+    border-top-color: rgb(22, 7, 7)
+}
+
+.card-module-8 {
+    border-top-color: rgb(171, 130, 247)
+}
+
+.card-module-9 {
+    border-top-color: rgb(224, 201, 201)
+}
+
+.note {
+    font-size: 15px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Group1 Header Styles */
+header {
+    background-color: rgba(0, 0, 0, 0.727);
+    padding: 20px;
+    box-shadow: 5px 5px 10px rgb(102, 217, 255);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+}
+
+.list-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.list-menu li {
+    margin-top: 10px;
+    transition: transform 5.3s ease;
+}
+
+.list-menu li:hover {
+    transform: translateY(-10px);
+}
+
+.list-menu a {
+    text-decoration: none;
+    color: aliceblue;
+    font-weight: bold;
+    background: linear-gradient(135deg, rgb(192, 224, 238), rgb(3, 3, 93));
+    padding: 8px 16px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px #ffffff;
+}
+
+.list-menu li a:hover {
+    background: linear-gradient(135deg, red, orange);
+}
+
+h1 {
+    color: rgb(255, 255, 255);
+}
+
+.badge {
+    color: rgb(19, 19, 154);
+    padding: 5px 7px;
+    background-color: rgba(139, 193, 248, 0.442);
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: bold;
+
+    vertical-align: middle;
+}
+
+.back-link {
+    color: rgb(255, 255, 255);
+    text-decoration-line: none;
+    border-radius: 50px;
+    background: linear-gradient(135deg,White,darkblue);
+    display: inline-block; 
+    padding: 16px;
+    text-align: center;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.back-link:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(18, 18, 167);
+    text-decoration-line: none;
+
+}
+
+.p-color {
+    color: #ffffff;
+}
+
+/* Group2  */
+.img-small {
+    width: 100px;
+    height: 100px;
+    margin-top: 10px;
+}
+
+.position {
+    display: flex;
+    align-items: center;
+    border: 1px dashed red;
+    margin: 8px auto;
+}
+
+.position.left {
+    display: flex;
+    justify-content: start;
+}
+
+.position.center {
+    display: flex;
+    justify-content: center;
+}
+
+.position.right {
+    display: flex;
+    justify-content: end;
+}
+
+/* Group3  */
+.image-fixed {
+    width: 200px;
+    height: auto;
+    margin-top: 15px;
+
+    object-fit: cover;
+}
+
+/* Group4  */
+.obj-fit-image {
+    width: 800px;
+    height: 200px;
+    border: 1px solid black;
+}
+
+.obj-fit-image.contain {
+    object-fit: contain;
+}
+
+.obj-fit-image.fill {
+    object-fit: fill;
+}
+
+.obj-fit-image.cover {
+    object-fit: cover;
+}
+
+/* Group5  */
+.img-realmadrid {
+    width: 200px;
+    height: auto;
+
+    margin: 20px 0;
+    transition: 0.2s;
+}
+
+.img-realmadrid img:hover {
+    transform: rotate(360deg);
+    transform: scale(1.card-module-1);
+    box-shadow: 0 5px 20px rgb(12, 8, 8);
+}
+
+/* Group6  */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.gallery img {
+    height: 120px;
+    object-fit: cover;
+}
+
+/* Group7  */
+figure {
+    text-align: center;
+}
+
+/* Group8  */
+
+
+/* Group9  */
+.bg-image {
+    background-image: url("../images/FC_Barcelona_logo.png") !important;
+    background-size: contain;
+    background-position: center;
+}
+
+/* Group10  */
