@@ -1,0 +1,101 @@
+/* Global CSS styles */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+   background-color: rgba(9, 6, 6, 0.866);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1 {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+}
+
+.card {
+   background-color: aqua; 
+   padding: 10px 20px;
+   border-top: 5px solid rgb(15, 11, 11);
+   border-radius: 15px;
+   margin-bottom: 25px;
+   box-shadow: 0 5px 15px rgb(239, 237, 253);
+}
+
+header {
+       background-color: rgba(0, 0, 0, 0.727);
+    padding: 20px;
+    box-shadow: 5px 5px 10px rgb(102, 217, 255);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.list-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.list-menu a {
+    text-decoration: none;
+    color: aliceblue;
+    font-weight: bold;
+    background: linear-gradient(135deg, rgb(192, 224, 238), rgb(3, 3, 93));
+    padding: 8px 16px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px #ffffff;
+}
+.img-small {
+    width: 100px;
+    height: 100px;
+    margin-top: 10px;
+}
+.position {
+    display: inline-block;
+    align-items: center;
+     border: 5px solid rgb(0, 0, 0);
+    margin: auto;
+    padding: 5px;   
+}
+.position.left {
+   display: flex;
+   justify-items: start;
+} 
+ .card1 {
+        background-color: #5948af; 
+        padding: 10px ;
+        border-radius: 15px;
+        color: white;
+        gap: 30px; /* ระยะห่างระหว่างรูปกับข้อความ */
+        width: 50% ;
+        margin: 10px auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+
+    .info-section {
+        display: flex;
+        flex-direction: row; /* แบ่งข้อความเป็นสองคอลัมน์ */
+        gap: 50px;
+    }
+
+    .main-info p, .contact-info p {
+        margin: 8px 0;
+        font-size: 16px;
+    }
+
+    .contact-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }

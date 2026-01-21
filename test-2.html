@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    .profile-card {
+        display: flex;
+        align-items: center; /* จัดให้อยู่กลางแนวตั้ง */
+        background-color: #8D6E63; /* สีน้ำตาลตามรูป */
+        padding: 20px;
+        border-radius: 15px;
+        color: white;
+        font-family: 'Tahoma', sans-serif;
+        gap: 30px; /* ระยะห่างระหว่างรูปกับข้อความ */
+    }
+
+    .image-container {
+        border: 2px dashed #5D4037; /* เส้นประรอบรูป */
+        padding: 10px;
+        border-radius: 20px;
+        line-height: 0;
+    }
+
+    .profile-img {
+        width: 150px; /* ปรับขนาดรูปตามต้องการ */
+        height: 150px;
+        object-fit: cover;
+        border-radius: 15px;
+    }
+
+    .info-section {
+        display: flex;
+        flex-direction: row; /* แบ่งข้อความเป็นสองคอลัมน์ */
+        gap: 50px;
+    }
+
+    .main-info p, .contact-info p {
+        margin: 8px 0;
+        font-size: 16px;
+    }
+
+    .contact-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+</style>
+</head>
+<body>
+
+<div class="profile-card">
+    <div class="image-container">
+        <img src="your-image.jpg" alt="Profile" class="profile-img">
+    </div>
+
+    <div class="info-section">
+        <div class="main-info">
+            <p><strong>รหัสนักศึกษา:</strong> 674230011</p>
+            <p><strong>ชื่อ:</strong> นาย สมพงษ์ พูตุ้ย</p>
+            <p><strong>หมู่เรียน:</strong> 67/44</p>
+            <p><strong>สาขา:</strong> เทคโนโลยีสารสนเทศ</p>
+            <p><strong>คณะ:</strong> วิทยาศาสตร์และเทคโนโลยี</p>
+        </div>
+        
+        <div class="contact-info">
+            <p>📧 674230011@webmail.npru.ac.th</p>
+            <p>📞 0XX-XXX-XXXX</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
