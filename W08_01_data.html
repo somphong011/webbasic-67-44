@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&display=swap');
+
+        body {
+            background-color: #121212;
+            /* พื้นหลังมืด */
+            color: white;
+            font-family: 'Kanit', sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .main-container {
+            width: 90%;
+            max-width: 1000px;
+            background-image: url(https://media.istockphoto.com/id/1183329518/th/%E0%B8%A3%E0%B8%B9%E0%B8%9B%E0%B8%96%E0%B9%88%E0%B8%B2%E0%B8%A2/%E0%B9%80%E0%B8%99%E0%B8%9A%E0%B8%B4%E0%B8%A7%E0%B8%A5%E0%B8%B2%E0%B8%88%E0%B8%B1%E0%B8%81%E0%B8%A3%E0%B8%A7%E0%B8%B2%E0%B8%A5%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%94%E0%B8%B2%E0%B8%A7%E0%B8%AA%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B9%81%E0%B8%AA%E0%B8%87.jpg?s=612x612&w=0&k=20&c=Xw9CJGWDLwavYsomHeU-6bY_8nERKWJhwO1ND_a1XLE=);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+
+            background-size: cover;
+
+        }
+
+        header h1 {
+            text-align: center;
+            font-weight: bold;
+            font-size: 50px;
+            letter-spacing: 2px;
+        }
+
+        .content-wrapper {
+            display: flex;
+            /* จัด Sidebar และ Display ให้อยู่ข้างกัน */
+            gap: 30px;
+        }
+
+        /* Sidebar ส่วนปุ่มกด */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            min-width: 200px;
+        }
+
+        .tab-btn {
+            background: #09055e;
+            /* สีน้ำเงิน */
+            border: none;
+            color: white;
+            padding: 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+
+            font-weight: bold;
+        }
+
+        .tab-btn:hover {
+            background: #3b82f6;
+            transform: scale(1.05);
+        }
+
+        .tab-btn.active:hover {
+            background: #3b82f6;
+            /* สีเมื่อถูกเลือก */
+            font-weight: bold;
+            box-shadow: 0 0 15px rgba(79, 70, 229, 0.4);
+        }
+             .tab-btn:hover {
+            background: #3b82f6;
+            transform: scale(1.05);
+        }
+
+
+        /* พื้นที่แสดงผล */
+        .display-area {
+            flex-grow: 1;
+        }
+
+        .tab-content {
+            display: none;
+            /* ซ่อนเนื้อหาปกติ */
+            animation: fadeIn 0.5s ease;
+        }
+
+        .tab-content.active {
+            display: block;
+            /* แสดงเฉพาะส่วนที่เลือก */
+        }
+
+        .info-card {
+            background: #18073e;
+            /* พื้นหลังสีม่วงตามวิดีโอ */
+            padding: 20px;
+            border-radius: 15px;
+            min-height: 120px;
+
+
+        }
+
+          .main-info p, .contact-info p {
+        margin: 8px 0;
+        font-size: 16px;
+    }
+        .info-card h2 {
+            margin-top: 0;
+        }
+
+        .info-card p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .semester-title {
+            background: #0b2ea3;
+            color: #fff;
+            text-align: center;
+            font-weight: bold;
+            padding: 10px;
+            font-size: 18px;
+        }
+
+        /* ปรับขนาดของกล่องในตาราง */
+        .grade-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        /* ปรับกรอบตรง ชื่อ วิชา Sec. หน่วยกิต เกรด */
+        .grade-table th {
+            background: #dfe4ff;
+            color: #333;
+            border: 1px solid #c7c7c7;
+            padding: 8px;
+            text-align: center;
+        }
+
+        /* ปรับสีขอบเส้นตารางที่คอยคุมรหัส วิชา หมู่เรียน */
+        .grade-table td {
+            border: 1px solid #c7c7c7;
+            padding: 8px;
+            font-size: 14px;
+        }
+
+        /* ปรับขนาดของตัวหนังสือให้อยู่ตรงกลาง */
+        .grade-table td:nth-child(1),
+        .grade-table td:nth-child(3),
+        .grade-table td:nth-child(4),
+        .grade-table td:nth-child(5) {
+            text-align: center;
+        }
+
+        /* ปรับกล่องนอกของกล่องที่เก็บเกรดเฉลี่ย */
+        .summary {
+            display: flex;
+            justify-content: space-between;
+            background: #eee;
+            padding: 10px;
+        }
+
+        /* ปรับกล่องด้านในที่เก็บเกรดเฉลี่ย */
+        .summary-box {
+            width: 50%;
+            background: #000000;
+            border: 1px solid #000000;
+            padding: 10px 10px;
+            font-size: 14px;
+        }
+
+        .img-small {
+            width: 150px;
+            height: 150px;
+            margin-top: 0px;
+        }
+        .f-img {
+            height: 20px;
+            width: 20px;
+            margin: 0;
+        }
+         .Home-btn {
+            display: inline-block;
+            background-color: #09055e;
+            padding: 8px 14px;
+            color: #f0f0f0;
+            margin-top: 10px;
+            border-radius: 20px;
+           
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+        <header>
+            <h1>Student Information</h1>
+        </header>
+
+        <div class="content-wrapper">
+            <div class="sidebar">
+                <button class="tab-btn active" onclick="openTab(event, 'profile')">ข้อมูลนักศึกษา</button>
+                <button class="tab-btn" onclick="openTab(event, 'grades')">ผลการเรียน</button>
+                <button class="tab-btn" onclick="openTab(event, 'contact')">ช่องทางการติดต่อ</button>
+            
+            </div>
+            <main class="display-area">
+
+                <section id="profile" class="tab-content active">
+                    <div>
+                        <h2>ข้อมูลนักศึกษา</h2>
+                    </div>
+                    <div class="info-card">
+                        <div class="main-info">
+                            <img src="images/Somphong_logo.jpg" alt="" class="img-small">
+                        </div>
+                        <p><strong>ชื่อ :</strong> นาย สมพงษ์ พูตุ้ย</p>
+                        <p><strong>คณะ :</strong>วิทยาศาสตร์และเทคโนโลยี </p>
+                        <p><strong>หมู่เรียน :</strong> 67/44</p>
+                        <p><strong>สาขา :</strong> เทคโนโลยีสารสนเทศ</p>
+                        <p><strong>วันเกิด :</strong> วันที่ 03/ธันวาคม/พ.ศ.2548</p>
+                        <p><strong>สัญชาติ</strong> ไทย</p>
+                        <p><strong>ศาสนา :</strong> พุทธ </p>
+                    </div>
+                </section>
+
+                <section id="grades" class="tab-content">
+                    <h2>ผลการเรียน</h2>
+                    <div class="info-card">
+                        <div class="semester-title">
+                            ภาคการศึกษาปี1 เทอมที่ 1/2567
+                        </div>
+
+                        <table class="grade-table">
+                            <thead>
+                                <tr>
+                                    <th>รหัสวิชา</th>
+                                    <th>ชื่อวิชา</th>
+                                    <th>Sec.</th>
+                                    <th>หน่วยกิต</th>
+                                    <th>เกรด</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1500001</td>
+                                    <td>ภาษาอังกฤษเพื่อการสื่อสารในสังคม 1</td>
+                                    <td>67/44</td>
+                                    <td>0</td>
+                                    <td>P</td>
+                                </tr>
+                                <tr>
+                                    <td>1500204</td>
+                                    <td>การสื่อสารอย่างผู้นำ</td>
+                                    <td>67/44</td>
+                                    <td>3</td>
+                                    <td>B</td>
+                                </tr>
+                                <tr>
+                                    <td>2500201</td>
+                                    <td>จิตวิญญาณราชภัฏนรคปฐม</td>
+                                    <td>67/44</td>
+                                    <td>3</td>
+                                    <td>A</td>
+                                </tr>
+                                <tr>
+                                    <td>7201101</td>
+                                    <td>คณิตศาสตร์และสถิติสำหรับเทคโนโลยีสารสนเทศ</td>
+                                    <td>67/44</td>
+                                    <td>3</td>
+                                    <td>C+</td>
+                                </tr>
+                                <tr>
+                                    <td>7201102</td>
+                                    <td>ระบบคอมพิวเตอร์</td>
+                                    <td>67/44</td>
+                                    <td>3</td>
+                                    <td>B</td>
+                                </tr>
+                                <tr>
+                                    <td>7201103</td>
+                                    <td>หลักการเขียนโปรแกรมคอมพิวเตอร์</td>
+                                    <td>67/44</td>
+                                    <td>3</td>
+                                    <td>B+</td>
+                                </tr>
+                                <tr>
+                                    <td>7201401</td>
+                                    <td>โปรแกรมสำเร็จรูปมัลติมีเดีย</td>
+                                    <td>67/44</td>
+                                    <td>3</td>
+                                    <td>B+</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="summary">
+                            <div class="summary-box">
+                                <strong>THIS SEMESTER</strong><br>
+                                C.Register: 18<br>
+                                C.Earn: 18<br>
+                                CA: 18<br>
+                                GP: 58.5<br>
+                                GPA: 3.25
+                            </div>
+
+                            <div class="summary-box">
+                                <div>
+                                    <strong>ผลการศึกษา: ปกติ</strong>
+                                </div>
+                                <strong>CUMULATIVE TO THIS SEMESTER</strong><br>
+                                C.Register: 18<br>
+                                C.Earn: 18<br>
+                                CA: 18<br>
+                                GP: 58.5<br>
+                                GPA: 3.25
+                            </div>
+                        </div>
+                        <p><strong>GPA รวม:</strong> 3.25</p>
+                    </div>
+                </section>
+
+                <section id="contact" class="tab-content">
+                    <h2>ช่องทางการติดต่อ</h2>
+                    <div class="info-card">
+                        <p><img src="https://img.icons8.com/?size=100&id=czpd3OfwK2l4&format=png&color=000000" alt="" class="f-img"> : 674230011@gmail.npru.ac.th</p>
+                        <p><img src="https://img.icons8.com/?size=100&id=124195&format=png&color=000000" alt="" class="f-img"> : 099-407-7861</p>
+                        <p><img src="https://img.icons8.com/?size=100&id=LwgRGD3tWsTP&format=png&color=000000"  alt="" class="f-img"> : Te sompong</p>
+                       <p><img src="https://img.icons8.com/?size=100&id=Xy10Jcu1L2Su&format=png&color=000000" alt="" class="f-img"> : LAXTZQ</p>
+                       <p><img src="https://img.icons8.com/?size=100&id=4VYtcK8n0Hsg&format=png&color=000000" alt="" class="f-img"> : 0994077861</p>
+                       
+                    </div>
+                </section>
+                <section>
+                     <a href="index.html" class="Home-btn">กลับหน้าหลัก</a>
+                </section>
+
+            </main>
+        </div>
+    </div>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("active");
+            }
+            tablinks = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
+</body>
+
+</html>
