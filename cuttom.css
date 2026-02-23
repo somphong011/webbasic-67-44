@@ -1,0 +1,437 @@
+/* Global CSS styles */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Prompt", sans-serif;
+    background-color: cyan;
+}
+
+.wrapper {
+    width: 1000px;
+    margin: 0 auto;
+    max-width: 100%;
+
+    /* background-color: blue; */
+}
+
+a {
+    text-decoration: none;
+    color: blue;
+
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ================================================= */
+/* Header */
+/* ================================================= */
+.hero-content {
+    background-color: rgb(16, 7, 85);
+    padding: 20px;
+    box-shadow: 0 5px 8px rgb(230, 138, 138);
+
+    margin-bottom: 20px;
+}
+
+.hero-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: white;
+    text-shadow: 0 4px 8px #333;
+
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
+.hero-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, minmax(350px, 1fr));
+
+    /*
+        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(250px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    */
+}
+
+.hero-item {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+    backdrop-filter: blur(10px);
+    /* เพิ่มความเบลอพื้นหลังด้านหลังไอเท็ม */
+
+
+    transition: all 0.3s ease;
+
+    /*overflow: hidden; /* ซ่อนส่วนที่เกินขอบเขตของกล่อง */
+}
+
+.hero-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    background: white;
+}
+
+.hero-item h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+    line-height: 1.3;
+    margin-bottom: 10px;
+}
+
+.hero-item p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.hero-item .read-more {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #1e8bc3;
+
+    display: inline-block;
+}
+
+.hero-item .read-more:hover {
+    color: #764ba2;
+    text-decoration: none;
+}
+
+.hero-item .read-more::after {
+    content: '→';
+    margin-left: 5px;
+
+    transition: margin-left 0.3s ease;
+}
+
+.hero-item .read-more:hover::after {
+    margin-left: 100px;
+}
+
+/* =========================================================================== */
+
+
+
+.site-header {
+    background-color: white;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+
+}
+
+.site-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.site-subtitle {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: darkgray;
+}
+
+.social-icons a {
+    font-size: 1rem;
+    font-weight: 600;
+    color: brown;
+
+    border: 1px solid #555;
+    border-radius: 50%;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+
+    transition: all 0.5s ease;
+}
+
+.social-icons a:hover {
+    background-color: rgb(0, 0, 0);
+    color: white;
+
+    transform: translateY(-5px);
+}
+
+/* ================================================= */
+/* Nav style*/
+/* ================================================= */
+
+.main-nav {
+    background-color: rgb(0, 0, 0);
+}
+
+.nav-menu {
+    display: flex;
+    list-style-type: none;
+
+    flex-wrap: wrap;
+}
+
+.nav-menu li a {
+    color: white;
+    font-size: 0.9 rem;
+
+    display: block;
+    padding: 10px 15px;
+}
+
+.nav-menu li a:hover,
+.nav-menu li a.active {
+    background-color: rgb(37, 3, 69);
+}
+
+
+/* ================================================= */
+/* Page section*/
+/* ================================================= */
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 2fr 0.9fr;
+    gap: 20px;
+}
+
+.post-headline {
+    font-size: 0.650rem;
+    color: cadetblue;
+    margin-bottom: 10px;
+
+    text-transform: uppercase;
+}
+
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.date-circle {
+    background-color: blue;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    color: white;
+    font-size: 0.69rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.date-circle span.day {
+    font-size: 1.2rem;
+    font-weight: 900;
+}
+
+.post-discription {
+    font-size: 0.82rem;
+    color: cadetblue;
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+
+
+/* ---------------left side------------------- */
+.card {
+    background-color: white;
+    border-radius: 4px;
+
+    padding: 20px;
+}
+
+.card+.card {
+    margin-top: 20px;
+}
+
+
+.post-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+/* ================css for card 1=============== */
+
+.post-img {
+    overflow: hidden;
+    height: 200px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.post-img img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.post-footer {
+    font-size: 0.68rem;
+    padding-top: 10px;
+
+    border-top: 1px solid #333;
+    color: #333;
+
+    display: flex;
+    gap: 10px;
+}
+
+/* ================css for card 2 = table =============== */
+.comparison-tb {
+    box-shadow: 0 4px 10px rgb(230, 180, 180);
+}
+
+/* .comparison-tb th,
+.comparison-td td {
+    border: 1px solid #23065d;
+  
+}
+.comparison-tb th {
+    background-color: #764ba2;
+} */
+
+.comparison-tb th {
+    background: linear-gradient(45deg, darkblue 0%, blue 100%);
+    color: white;
+    padding: 12.5px;
+}
+
+.comparison-tb tr:nth-child(even) td {
+    background-color: rgb(143, 238, 195);
+}
+
+.comparison-tb tr:hover td {
+    background-color: rgb(216, 164, 234);
+}
+
+.comparison-tb td {
+    background-color: rgb(227, 214, 222);
+    padding: 12.5px;
+}
+
+.feature {
+    font-weight: 700;
+    color: #333;
+    font-size: 0.8rem;
+}
+
+.text-green {
+    font-weight: 500;
+    color: green;
+    font-size: 0.8rem;
+}
+
+.text-red {
+    font-weight: 500;
+    color: red;
+    font-size: 0.8rem;
+}
+
+.text-gray {
+    font-weight: 500;
+    color: gray;
+    font-size: 0.8rem;
+}
+
+/* ================= set style for From : Left Side =================*/
+
+.form-input,
+.form-select,
+.form-textarea {
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+.contact-from-main-card.form-input,
+.contact-from-main-card.form-select,
+.contact-from-main-card.form-textarea {
+    background-color:rgb(244, 253, 254);
+    color: gray;
+}
+
+.form-label {
+    display: block;
+
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: red;
+    margin-bottom: 5px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-low {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.contact-from-main-card {
+    background-color: whitesmoke;
+    box-shadow: 0px 5px 8px aqua;
+    padding: 40px;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin-top: 10px;
+}
+
+.form-checkbox-group {
+    display: flex;
+    gap: 10px;
+}
+
+.checkbox-item {
+    font-size: 0.82rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.checkbox-item input[type="checkbox"] {
+    accent-color: blue;
+    transform: scale(1.25);
+}
+
+/* ---------------right side------------------- */
+.widget {
+    background-color: white;
+    border-radius: 4px;
+
+    padding: 20px;
+    margin-top: 20px;
+}
