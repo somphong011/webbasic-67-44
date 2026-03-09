@@ -207,7 +207,9 @@ a:hover {
   grid-template-columns: 2fr 0.9fr;
   gap: 20px;
 }
-
+.page {
+  padding: 0.8rem;
+}
 .post-headline {
   font-size: 0.65rem;
   color: cadetblue;
@@ -401,21 +403,54 @@ a:hover {
   margin-top: 10px;
 }
 
+/* จัดกลุ่ม Checkbox ให้ชิดซ้าย */
 .form-checkbox-group {
   display: flex;
-  gap: 10px;
+  align-items: start;
+  gap: 20px; /* ระยะห่างระหว่างรายการแต่ละแถว */
 }
 
 .checkbox-item {
   font-size: 0.82rem;
   display: flex;
-  align-items: center;
-  gap: 8px;
+  align-items: center; /* ให้กล่องอยู่ระดับเดียวกับบรรทัดแรกของข้อความ */
+  gap: 12px; /* ระยะห่างระหว่างกล่องกับข้อความ */
+  white-space: nowrap;
 }
 
 .checkbox-item input[type="checkbox"] {
-  accent-color: blue;
+  /* ปรับให้กล่องตรงกับบรรทัดแรกพอดี */
+  cursor: pointer;
   transform: scale(1.25);
+}
+
+/* ส่วนปุ่มกด (ส่งข้อความ / ล้างข้อมูล) */
+.form-buttons {
+  display: flex;
+  gap: 10px; /* ระยะห่างระหว่างสองปุ่ม */
+}
+
+.btn-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 12px;
+  background-color: #f8f8f8; /* สีพื้นหลังเทาอ่อนตามรูป */
+  border: 1px solid #767676; /* เส้นขอบปุ่ม */
+  border-radius: 2px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  font-family: "Prompt", sans-serif;
+}
+
+.btn-action:hover {
+  background-color: #ebebeb;
+}
+
+/* ตกแต่งไอคอนในปุ่ม */
+.btn-icon {
+  width: 18px;
+  height: 18px;
 }
 
 .widget-title {
@@ -487,9 +522,9 @@ a:hover {
 }
 
 .facebook-box {
-  background-color: #5bc8d3; /* สีฟ้าตามภาพ */
+  background-color: #c7e4e7; /* สีฟ้าตามภาพ */
   padding: 15px 10px;
-  width: 350px;
+  width: 500px;
   font-family: "Tahoma", sans-serif;
   text-align: center; /* จัดทุกอย่างให้อยู่กึ่งกลาง */
   color: #000;
@@ -601,6 +636,9 @@ footer {
   text-align: center;
   padding: 30px 0px;
 }
+.card-margin {
+  margin: 30px 0px;
+}
 
 /* ---------------------------ตารางราคาทอง------------------------------ */
 :root {
@@ -654,16 +692,167 @@ footer {
   color: green;
 }
 .icon {
-    display: inline-block;
-    width: 0px;
-    height: 0px;
-    border-left: 6px solid transparent;
-    border-right: 6px solid transparent;
-
+  display: inline-b ock;
+  width: 0px;
+  height: 0px;
+  border-left: 6px olid transparent;
+  border-right: 6px solid transparent;
 }
 .up {
-    border-bottom: 10px solid var(--green-text);
+  border-bottom: 10px solid var(--green-text);
 }
 .down {
-border-top: 10px solid var(--red-text);
+  border-top: 10px solid var(--red-text);
 }
+
+/* หน้าจอสำหรับ Desktop: 992- */
+@media (max-width: 992px) {
+  .site-header {
+    background-color: yellow;
+  }
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-low {
+    grid-template-columns: 1fr;
+  }
+
+  .form-checkbox-group {
+    flex-direction: column;
+  }
+
+  .header-inner {
+    padding: 0 40px;
+  }
+}
+
+/* หน้าจอสำหรับ Mobile: 768-991 */
+@media (max-width: 768px) {
+  .site-header {
+    background-color: rgb(184, 110, 26);
+  }
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    padding: 15px 40px;
+  }
+  .nav-menu li a {
+    border-top: 1px solid gray;
+  }
+
+  .gold-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  .contact-from-main-card {
+    padding: 20px; /* ลด padding ลงเล็กน้อยบนมือถือเพื่อประหยัดพื้นที่ */
+  }
+
+  .form-checkbox-group {
+    margin-left: 10px; /* ลดระยะเยื้องลงในมือถือเพื่อให้ข้อความไม่ตกบรรทัด */
+  }
+}
+
+/* หน้าจอสำหรับ Mobile: 576-767 */
+@media (max-width: 576px) {
+}
+
+/* หน้าจอสำหรับ Mobile: 1-576 */
+@media (max-width: 576px) {
+  .site-herder {
+    background-color: #0019ff;
+  }
+
+  /* Hamberger */
+  #hamburger-menu {
+    display: block;
+    width: 30px;
+    height: 25px;
+    position: relative;
+
+    margin-left: 40px;
+    z-index: 1000;
+    cursor: pointer;
+  }
+
+  /* สร้างเส้น */
+  #hamburger-menu span,
+  #hamburger-menu span:before,
+  #hamburger-menu span:after {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #ffffff;
+    position: absolute;
+    content: "";
+  }
+
+  /* จัดตำแหน่งเส้น */
+  #hamburger-menu span {
+    top: 11px;
+  }
+  #hamburger-menu span:before {
+    top: -8px;
+  }
+  #hamburger-menu span:after {
+    top: 8px;
+  }
+
+  /* สรา้งเส้น กากบาท*/
+  /* #hamburger-menu.close span {
+    display: none;
+  }
+  #hamburger-menu.close span:before {
+    transform: rotate(45deg);
+    top: 0;
+  }
+  #hamburger-menu.close span:after {
+    transform: rotate(-45deg);
+    top: 0; */
+
+#hamburger-menu.close span {
+ background-color: transparent;
+}
+#hamburger-menu.close span::before {
+  transform: rotate(45deg);
+    top: 0;
+}
+#hamburger-menu.close span::after {
+  transform: rotate(-45deg);
+    top: 0;
+}
+
+
+  /* ซ่อนmenu */
+  #menu {
+    display: none;
+    flex-direction: column;
+  }
+
+  #menu.overlay {
+    display: flex;
+  }
+
+
+  .order-box-image { order: 3}
+  .order-box-table {order: 1}
+  .order-box-form {order: 2}
+
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+}
+
+  .order-w-f-intro {order: 1}
+  .order-w-f-green {order: 4}
+  .order-w-f-purple {order: 5}
+  .order-w-f-fb {order: 2}
+  .order-w-f-sp {order: 3}
+   }
+

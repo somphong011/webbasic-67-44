@@ -41,14 +41,19 @@
     <!-- Navbar -->
     <nav class="main-nav">
         <div class="wrapper">
-            <ul class="nav-menu">
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="#">AI Technology</a></li>
-                <li><a href="#">Machine Learning</a></li>
-                <li><a href="#">Deep Learning</a></li>
-                <li><a href="#">AI Tools</a></li>
-                <li><a href="#">AI News</a></li>
-            </ul>
+        <div id="hamburger-menu">
+            <span></span>
+        </div>
+            <div id="menu">
+                <ul class="nav-menu">
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">AI Technology</a></li>
+                    <li><a href="#">Machine Learning</a></li>
+                    <li><a href="#">Deep Learning</a></li>
+                    <li><a href="#">AI Tools</a></li>
+                    <li><a href="#">AI News</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 
@@ -107,7 +112,7 @@
                 <!-- left site -->
                 <main class="post-list">
                     <!-- card1 = img -->
-                    <div class="card">
+                    <div class="card order-box-image">
                         <p class="post-headline">CATEGORY ARCHIVES: <b>RESPONSIVE DESIGN</b></p>
 
                         <div class="post-header">
@@ -140,7 +145,7 @@
                     </div>
 
                     <!-- card2 = table -->
-                    <div class="card">
+                    <div class="card order-box-table">
                         <p class="post-headline">CATEGORY ARCHIVES: CSS DISPLAY PROPERTY</p>
 
                         <div class="post-header">
@@ -218,7 +223,7 @@
                     </div>
 
                     <!-- card3 = from -->
-                    <div class="card">
+                    <div class="card order-box-form">
                         <h2 style="text-align: center;">📞 ติดต่อเรา</h2>
                         <div class="contact-from-main-card">
                             <form action="" method="">
@@ -303,10 +308,10 @@
                 </main>
 
                 <!-- right site -->
-                <aside>
+                <aside class="sidebar">
 
                     <!-- widget = 01 -->
-                    <div class="widget">
+                    <div class="widget order-w-f-intro">
                         <div class="widget-title">สวัสดีครับ ยินดีต้อนรับ</div>
                         <p class="post-discription">
                             ผมชื่อ Suksawat เขียนบล็อกเกี่ยวกับ Startup การตลาด การเขียนโปรแกรม และเทคโนโลยี AI สำหรับ
@@ -319,7 +324,7 @@
 
                     <!-- widget = 02 -->
                     <!-- แบบฟอร์มรับข่าวสาร -->
-                    <div class="widget">
+                    <div class="widget order-w-f-green">
                         <div class="form-container newsletter-form">
                             <h3>📧 รับข่าวสารใหม่</h3>
                             <form>
@@ -342,7 +347,7 @@
 
 
                     <!-- แบบฟอร์มติดต่อด่วน -->
-                    <div class="widget">
+                    <div class="widget order-w-f-purple">
                         <div class="form-container contact-form">
                             <h3>💬 ติดต่อด่วน</h3>
                             <form>
@@ -365,7 +370,7 @@
 
 
                     <!-- widget = 04 -->
-                    <div class="widget">
+                    <div class="widget order-w-f-fb">
                         <p class="sponsor-w">Facebook lite</p>
                         <div class="facebook-box">
                             <div class="title-text">กล่อง Facebook Like (ตัวอย่าง)</div>
@@ -379,7 +384,7 @@
 
 
                     <!-- widget = 05 -->
-                    <div class="widget">
+                    <div class="widget order-w-f-sp">
                         <p class="sponsor-w">Sponsor</p>
                         <div class="autor-photo">พื้นที่โฆษณา / วิดีโอ</div>
                     </div>
@@ -391,7 +396,7 @@
             <!--------------------------------- table ราคาทอง ----------------------------------------->
 
             <!-- card1 = img  -->
-            <div class="card" style="margin-top: 30px;">
+            <div class="card card-margin" style="margin-top: 30px;">
                 <p class="post-headline">CATEGORY ARCHIVES: <b>RESPONSIVE DESIGN</b></p>
 
                 <div class="post-header">
@@ -505,6 +510,28 @@
 
         </div>
     </footer>
+
+    <script>
+        var burgerMenu = document.getElementById('hamburger-menu');
+        var overlay = document.getElementById('menu');
+
+        burgerMenu.addEventListener('click', function () {
+            this.classList.toggle("close");
+            overlay.classList.toggle("overlay");
+        });
+
+        // ปิดเมนูเมื่อกดลิงก์
+        var menuLinks = document.querySelectorAll('#menu a');
+
+        menuLinks.forEach(function (link) {
+            link.addEventListener('click', function () {
+                burgerMenu.classList.remove("close");
+                overlay.classList.remove("overlay");
+            });
+        });
+
+
+    </script>
 
 
 </body>
