@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌶️ ข้าวคลุกน้ำพริกเฮียเด็ด - สั่งออนไลน์</title>
+    <link rel="stylesheet" href="styless.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">🌶️ เฮียเด็ด น้ำพริกคลุก</div>
+        <div style="display: flex; gap: 10px;">
+            <button class="btn-cart-nav" onclick="openModal('cartModal')">
+                🛒 ตะกร้า (<span id="cartCount">0</span>)
+            </button>
+            <button class="btn-login-nav" id="userBtn" onclick="openModal('loginModal')">เข้าสู่ระบบ</button>
+        </div>
+    </nav>
+
+    <header>
+        <h1>ข้าวน้ำพริกที่จริงใจ</h1>
+        <p>ตำเองทุกครก สดใหม่ทุกจาน</p>
+    </header>
+
+    <div class="container">
+        <h2 style="text-align: center;">เมนูแนะนำ</h2>
+        <div class="menu-grid">
+            <div class="menu-card">
+                <div class="menu-img">🥘</div>
+                <div class="menu-detail">
+                    <h3>ข้าวคลุกน้ำพริกกะปิปลาทู</h3>
+                    <div class="price">฿89</div>
+                    <button class="btn-add" onclick="startOrder('ข้าวคลุกน้ำพริกกะปิปลาทู', 89)">เลือกรายการ</button>
+                </div>
+            </div>
+            <div class="menu-card">
+                <div class="menu-img">🍛</div>
+                <div class="menu-detail">
+                    <h3>ข้าวคลุกน้ำพริกตาแดงหมูหวาน</h3>
+                    <div class="price">฿79</div>
+                    <button class="btn-add" onclick="startOrder('ข้าวคลุกน้ำพริกตาแดงหมูหวาน', 79)">เลือกรายการ</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="loginModal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModals()">&times;</span>
+            <h2 style="text-align:center">ยินดีต้อนรับครับ 🌶️</h2>
+            <form id="loginForm">
+                <input type="text" id="nickName" placeholder="ชื่อเล่นของคุณ" required>
+                <input type="tel" id="phone" placeholder="เบอร์โทรศัพท์" pattern="[0-9]{10}" required>
+                <button type="submit" class="btn-add">เข้าสู่ระบบ</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="orderModal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModals()">&times;</span>
+            <h2 id="displayMenuName" style="margin-bottom:0">ชื่อเมนู</h2>
+            <hr>
+            <div class="section-title">1. รูปแบบการเสิร์ฟ</div>
+            <div class="radio-group">
+                <label><input type="radio" name="serveType" value="คลุก" checked><span class="radio-btn">คลุกให้เลย</span></label>
+                <label><input type="radio" name="serveType" value="แยก"><span class="radio-btn">แยกน้ำพริก</span></label>
+            </div>
+
+            <div class="section-title">2. เลือกท็อปปิ้ง (+฿15)</div>
+            <div class="topping-grid" id="toppingList">
+                <label class="check-item"><input type="checkbox" value="ไข่ต้ม"> ไข่ต้ม</label>
+                <label class="check-item"><input type="checkbox" value="ปลาทูทอด"> ปลาทูทอด</label>
+                <label class="check-item"><input type="checkbox" value="กุนเชียง"> กุนเชียง</label>
+                <label class="check-item"><input type="checkbox" value="หมูหวาน"> หมูหวาน</label>
+                <label class="check-item"><input type="checkbox" value="ไข่ชะอม"> ไข่ชะอม</label>
+            </div>
+
+            <div class="section-title">3. รับเพิ่มฟรี</div>
+            <div class="extra-group">
+                <label class="check-item"><input type="checkbox" id="addSoup"> รับน้ำซุป</label>
+                <label class="check-item"><input type="checkbox" id="addSpoon"> รับช้อน-ส้อม</label>
+                <label class="check-item"><input type="checkbox" id="addChili"> รับพริกน้ำปลา</label>
+            </div>
+            <button class="btn-add" onclick="addToCart()">ใส่ตะกร้า</button>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="cartModal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModals()">&times;</span>
+            <h2 style="text-align:center; color: var(--primary);">🛒 ตะกร้าของฉัน</h2>
+            <div id="cartItemsContainer">
+                </div>
+            <div id="cartTotal" style="text-align: right; font-weight: bold; font-size: 1.2rem; margin-top: 15px;">
+                ยอดรวม: ฿0
+            </div>
+            <p style="font-size: 0.8rem; color: #666; background: #eee; padding: 10px; border-radius: 5px; margin-top: 10px;">
+                * ยื่นหน้านี้ให้ผู้ขายดูเพื่อยืนยันการสั่งซื้อ
+            </p>
+            <button class="btn-add" onclick="closeModals()" style="background: var(--secondary);">สั่งเพิ่มอีก</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
