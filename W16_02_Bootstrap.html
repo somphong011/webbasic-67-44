@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Bootstrap: Somphong</title>
+
+    <!-- =======bootstrap======== -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstarp.css">
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark shadow-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">WebBootstrap : Somphong</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">หน้าหลัก</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Features">บริการ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Pricing">ช้อมูล</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#contact">ติดต่อ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ms = margin start = ml -->
+    <!-- me = margin end = mr-->
+    <!-- mt = margin top -->
+
+
+
+    <!-- hero section -->
+    <section class="hero-section">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <h1 class="display-5"> ตัวอย่างหน้าเว็บด้วย Bootstrap</h1>
+                    <p>หน้าเว็บนี้สร้างจาก Bootstrap Components พื้นฐาน เช่น Navbar, Grid, Card, Table และ Form</p>
+                    <a href="#" class="btn btn-light btn-lg me-2">เริ่มต้นใช้งาน</a>
+                    <a href="#" class="btn btn-outline-light btn-lg">ติดต่อเรา</a>
+                </div>
+
+
+
+                <!-------------------------- right------------------------>
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-body p-4">
+                            <h5 class="card-title text-dark">สรุปภาพรวมระบบ</h5>
+                            <p class="card-text text-muted">
+                                ใช้ Bootstrap Grid ในการจัดวางหน้า ใช้ Utility Classes ช่วยกำหนด spacing สี และ
+                                alignment</p>
+
+                            <div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Responsive Layout</li>
+                                    <li class="list-group-item">พร้อมใช้งานบนมือถือ</li>
+                                    <li class="list-group-item">ปรับแต่งต่อได้ง่าย</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="py-5">
+        <div class="container">
+
+            <h2 class="section-title text-center">คุณสมบัติเด่น</h2>
+            <p class="text-center text-muted mb-5">
+                ส่วนนี้ใช้ Bootstrap Grid + Card
+            </p>
+
+            <!-- <div class="row"> -->
+            <div class="row">
+                <div class="col md-4">
+
+                    <!-- <div class="card"> -->
+                    <div class="card feature-card h100 shadow-sm border-0">
+                        <div class="card-body">
+                            <h5 class="card-title">ออกแบบสวยงาม</h5>
+                            <p class="card-text">
+                                ใช้คลาสมาตรฐานของ Bootstrap ทำให้หน้าเว็บดูเป็นระเบียบและทันสมัย
+                            </p>
+                            <a href="#" class="btn btn-primary">อ่านเพิ่มเติม</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col md-4">
+                    <div class="card  feature-card">
+                        <div class="card-body">
+                            <h5 class="card-title">รองรับ Responsive</h5>
+                            <p class="card-text">
+                                สามารถแสดงผลได้ดีทั้งบนคอมพิวเตอร์ แท็บเล็ต และโทรศัพท์มือถือ
+                            </p>
+                            <a href="#" class="btn btn-success">ดูตัวอย่าง</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col md-4">
+                    <div class="card  feature-card">
+                        <div class="card-body">
+                            <h5 class="card-title">พัฒนารวดเร็ว</h5>
+                            <p class="card-text">
+                                ลดเวลาการเขียน CSS เอง เพราะ Bootstrap มี component สำเร็จรูปให้ใช้งาน
+                            </p>
+                            <a href="#" class="btn btn-warning">เริ่มต้น</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Table Section -->
+    <section id="table-section" class="bg-white py-5">
+        <div class="container">
+            <h2 class="section-title">ตัวอย่างตารางข้อมูล</h2>
+
+            <div class="table-responsive">
+                <table class="table table-striped table-hover">
+                    <thead class="table table-dark">
+                        <tr>
+                            <th>#</th>
+                            <th>ชื่อ</th>
+                            <th>ตำแหน่ง</th>
+                            <th>สถานะ</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>สมชาย ใจดี</td>
+                            <td>ผู้ดูแลระบบ</td>
+                            <td><span class="badge bg-success">Active</span></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>สมหญิง พัฒนา</td>
+                            <td>นักพัฒนาเว็บ</td>
+                            <td><span class="badge bg-warning text-dark">Pending</span></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>อนันต์ ทดสอบ</td>
+                            <td>ผู้ใช้งานทั่วไป</td>
+                            <td><span class="badge bg-danger">Inactive</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+     <!-- Contact Form -->
+
+    <section id="contact" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+
+                    <h2 class="section-title">ติดต่อเรา</h2>
+                    <p class="">
+                        แบบฟอร์มนี้ใช้ Form controls ของ Bootstrap
+                    </p>
+
+                    <form class="bg-white p-4 shadow-sm rounded ">
+                        <div class="mb-3">
+                            <label for="fullname" class="form-label">ชื่อ-นามสกุล</label>
+                            <input type="text" class="form-control" id="fullname" placeholder="กรอกชื่อของคุณ">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label">อีเมล</label>
+                            <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+                                placeholder="name@example.com">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="subject" class="form-label">หัวข้อ</label>
+                            <select class="form-select" aria-label="Default select example" id="subject">
+                                <option selected>เลือกหัวข้อ</option>
+                                <option value="1">สอบถามข้อมูล</option>
+                                <option value="2">ขอใบเสนอราคา</option>
+                                <option value="3">ติดต่อทีมงาน</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="message" class="form-label">ข้อความ</label>
+                                <textarea class="form-control" id="message" rows="4"
+                                    placeholder="พิมพ์ข้อความ..."></textarea>
+                            </div>
+                      
+
+                        <div class="mb-3">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <button type="submit " class="btn btn-danger">ส่งข้อมูล</button>
+                    </form>
+                </div>
+
+
+                <div class="col-md-6">
+                    <div class="card p-4 shadow-sm border-0 h-100">
+                        <h3>ข้อมูลเพิ่มเติม</h3>
+                        <p>
+                            คุณสามารถนำโค้ดตัวอย่างนี้ไปต่อยอดเป็นหน้าเว็บระบบงานนักศึกษา
+                            หน้าแสดงข้อมูลสินค้า หน้า dashboard หรือหน้า landing page ได้
+                        </p>
+                        <hr>
+                        <p><i class="fa-solid fa-phone"></i> <strong>โทร:</strong> 012-345-6789</p>
+                        <p><i class="fa-solid fa-envelope"></i> <strong>อีเมล:</strong> contact@example.com</p>
+                        <p><i class="fa-solid fa-location-dot"></i> <strong>ที่อยู่:</strong> นครปฐม ประเทศไทย</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modern Footer -->
+    <footer class="modern-footer text-light pt-5 pb-3">
+        <div class="container">
+            <div class="row">
+
+                <!-- Brand -->
+                <div class="col-lg-4 col-md-6 ">
+                    <h3 class="footer-brand">MyBootstrapSite</h3>
+                    <p class="footer-text">
+                        ตัวอย่าง Footer สไตล์ทันสมัยสำหรับเว็บไซต์องค์กร ระบบนักศึกษา
+                        หน้า dashboard หรือ landing page โดยใช้ Bootstrap ร่วมกับ custom CSS
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-lg-2 col-md-2">
+                    <h5 class="footer-title">เมนู</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="#">หน้าหลัก</a></li>
+                        <li><a href="#features">บริการ</a></li>
+                        <li><a href="#table-section">ข้อมูล</a></li>
+                        <li><a href="#contact">ติดต่อ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-title">บริการ</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="#">ออกแบบเว็บไซต์</a></li>
+                        <li><a href="#">พัฒนาระบบงาน</a></li>
+                        <li><a href="#">Dashboard</a></li>
+                        <li><a href="#">UI/UX Prototype</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-title">ติดต่อ</h5>
+                    <p class="mb-2">นครปฐม, ประเทศไทย</p>
+                    <p class="mb-2">โทร: 012-345-6789</p>
+                    <p class="mb-3">อีเมล: contact@example.com</p>
+
+                    <div class="social-icons ">
+                        <a href="#" class="social-circle">F</a>
+                        <a href="#" class="social-circle">L</a>
+                        <a href="#" class="social-circle">G</a>
+                        <a href="#" class="social-circle">Y</a>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="footer-line my-4">
+
+            <div class="d-flex justify-content-between align-items-center flex-column flex-md-row small">
+                <p class="mb-2 mb-md-0">© 2026 MyBootstrapSite. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#" class="">Privacy Policy</a>
+                    <a href="#" class="">Terms</a>
+                    <a href="#">Support</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
